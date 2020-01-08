@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	var slice1 []int = make([]int, 10, 20)
+	//slice1 := []string{ "123", "45", "asd"}
 	
 	for i := 0; i < len(slice1); i++ {
 		slice1[i] = 5 * i
