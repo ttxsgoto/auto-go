@@ -61,9 +61,60 @@ func main() {
 	
 	employees := [] SalaryCalculator{person1, person2, person3}
 	totalSum(employees)
+	Hello(&T{name:"ttxsgoto"})
+	s := "hello"
+	i := 12
+	str1 := struct {
+		name string
+	}{name:"ttxs"}
+	
+	describe(s)
+	describe(i)
+	describe(str1)
+	var s1 interface{} = 55
+	assert(s1)
+	findType("a")
+	findType(12)
+	findType(str1)
 }
 
+type I interface {
+	M() string
+}
 
+type T struct {
+	name string
+}
 
+func (t T) M() string {
+	return t.name
+}
 
+func Hello(i I) {
+	fmt.Printf("Name is: %s", i.M())
+}
+
+func describe(i interface{}) {
+	fmt.Printf("Type=%T ,value= %v\n", i, i)
+	
+}
+
+func assert(i interface{}) {
+	v, ok := i.(int)
+	if ok {
+		fmt.Println(v)
+	}
+}
+
+func findType(i interface{}) {
+	switch i.(type) {
+	case string:
+		fmt.Printf("String: %s\n", i.(string))
+	case int:
+		fmt.Printf("Int :%d\n", i.(int))
+	default:
+		fmt.Printf("Unknow type\n")
+	}
+	
+}
 

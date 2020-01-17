@@ -38,7 +38,8 @@ func main()  {
 	
 	var d2 Describer
 	a :=Address{state:"chengdu", country:"sichuan"}
-	d2 = &a     //存储在接口中的值是无法寻址的，因此编译器无法自动获取指针地址引发panic
+	d2 = &a
+	//d2 = a      // 不能使用值类型(引发panic)， 存储在接口中的值是无法寻址的，因此编译器无法自动获取指针地址引发panic
 	d2.Describe()
 	a.Describe()    // 指针变量调用指针方法
 	

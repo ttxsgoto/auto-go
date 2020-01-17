@@ -1,12 +1,12 @@
 package main
 
 import (
-	//"interfaces_reflection/balance"
+	"interfaces_reflection/balance"
 	"fmt"
 )
 
 func main() {
 	
-	//insts := make([]*balance.Instance)
+	insts := make([]*balance.Instance)
 	fmt.Printf("ok")
 }

@@ -42,10 +42,14 @@ func main() {
 		
 	}
 	//var s SalaryCalculator = e
-	////s = e
-	//s.DisplaySalary()
-	//var l LeaveCalculator = e
-	//fmt.Println("\nLeaves left =", l.CalculateLeavesLeft())
+	var s SalaryCalculator
+	s = e
+	//s := e
+	//s = e
+	
+	s.DisplaySalary()
+	var l LeaveCalculator = e
+	fmt.Println("\nLeaves left =", l.CalculateLeavesLeft())
 	
 	var empOp EmployeeOperations = e
 	empOp.DisplaySalary()

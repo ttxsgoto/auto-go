@@ -8,6 +8,11 @@ type struct1 struct {
 	str string
 }
 
+type person struct {
+	name   string
+	age    byte
+	isDead bool
+}
 func main() {
 	//type myStruct struct {
 	//	i int
@@ -28,4 +33,9 @@ func main() {
 	fmt.Printf("The float is: %f\n", ms.f1)
 	fmt.Printf("The string is: %s\n", ms.str)
 	fmt.Println(*ms, ms)
+	p1 := person{name: "zzy", age: 100}
+	p2 := p1
+	p2.name = "changed"
+	fmt.Println(p1.name, p2.name)
+	
 }
