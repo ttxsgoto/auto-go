@@ -55,6 +55,7 @@ func main() {
 	empOp.DisplaySalary()
 	fmt.Println("\nLeaves left =", empOp.CalculateLeavesLeft())
 	var nul EmployeeOperations
+	//nul.CalculateLeavesLeft() //  invalid memory address or nil pointer dereference
 	if nul == nil {
 		// 使用nil的接口调用一个方法，则程序会panic，
 		// 因为nil interface既没有底层的值也没有对应的具体类型.
